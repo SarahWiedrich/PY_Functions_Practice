@@ -36,3 +36,14 @@ def num_within(num):
 my_range = range(2, 3, 4)
 num_within(2)
 
+#pascals triangle 
+def pascal(n):
+    row = [1]
+    start = [0]
+    for x in range(max(n, 0)):
+        print(row)
+        row = [l + r for l, r in zip(row + start, start + row)]
+    return n>=1
+
+pascal(1)
+pascal(5)
